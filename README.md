@@ -23,15 +23,15 @@ To remove a kernel:
 
 We use a artificially generated dataset using the `sklearn.datasets.makeblobs module` to create a distribution with four clear clusters.
 
-<img src='../img/' />
+<img src='images/raw_clusters.png' />
 
 Using the K-means clustering with a random seed of 0, we get the following clustering results:
 
-<img src='../img/' />
+<img src='images/kmeans_seed0_clusters.png' />
 
 Using the same K-means clustering with a random seed of 2, we get the following clustering results:
 
-<img src='../img/' />
+<img src='images/kmeans_seed2_clusters.png' />
 
 We observe a suboptimal clustering with a seed of 0 due to random chance, i.e. the initial clusters were chosen at such a location which caused the clustering algorithm to converge to suboptimal centroids as seen in the figure with a seed of 0.
 
@@ -47,16 +47,16 @@ To avoid this suboptimal positions of the group centroids, we implement a K-mean
 
 Now, with a seed of 2, we get the following clustering results:
 
-<img src='../img/' />
+<img src='images/kmeans_pp_seed2_clusters.png' />
 
 And with a seed of 0, we get the following clustering results;
 
-<img src='../img/' />
+<img src='images/kmeans_pp_seed0_clusters.png' />
 
 ## Hierarchical Clustering
 
 -   Agglomerative Clustering
--   Divisive Clustering 
+-   Divisive Clustering
 
 **Agglomerative Clustering Algorithm**
 
@@ -64,3 +64,11 @@ And with a seed of 0, we get the following clustering results;
 -   Let each data point be a cluster
 -   Repeat: Merge the two closest clusters and update the proximity matrix
 -   Until only a single cluster remains
+
+To choose the apprirate value for the number of clusters, we can create a dendogram first.
+
+<img src='images/mall_customers_dendogram.png' />
+
+Plotting our `Mall_Customers.csv` dataset after Agglomerative Clustering:
+
+<img src='images/mall_customers_agg_clustering.png' />
