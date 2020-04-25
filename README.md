@@ -7,17 +7,23 @@ $ python -m venv venv
 $ pip install -r requirements.txt
 ```
 
-To start a new `Jupyter Notebook` kernel:
+To start a new Jupyter Notebook kernel based on the current virtualenv:
 
-`ipython kernel install --name "local-venv" --user`
+```shell
+$ python -m ipykernel install --user --name ENV_NAME --display-name "ENV_DISPLAY_NAME"
+```
 
 To list all kernels:
 
-`jupyter kernelspec list`
+```shell
+$ jupyter kernelspec list
+```
 
 To remove a kernel:
 
-`jupyter kernelspec uninstall unwanted-kernel`
+```shell
+$ jupyter kernelspec uninstall unwanted-kernel
+```
 
 ## K-means and K-means plus plus Clustering
 
